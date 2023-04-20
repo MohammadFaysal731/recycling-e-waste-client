@@ -6,8 +6,8 @@ import { navbarData } from './navbarData';
 
 const Navbar = () => {
   return (
-    <div className="bg-base-200">
-      <div className="navbar  px-2 max-w-[1440px] mx-auto">
+    <div className="bg-base-200 sticky top-0 z-10">
+      <div className="navbar  px-2 max-w-[1440px] mx-auto  ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <Link to="/" className="text-lg md:text-2xl font-bold ">
+          <Link to="/" className="text-lg md:text-2xl font-bold text-primary">
             Recycling E Waste
           </Link>
         </div>
