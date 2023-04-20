@@ -1,0 +1,29 @@
+[
+  {
+    "name": "32 Gallon Trash",
+    "image": "https://i.ibb.co/7YVZ3M7/pricing-1.png",
+    "holds": "2 Trash bags",
+    "serves": "1-2 people",
+    "maxWeight": "Approx 18kg",
+    "service": "Every Day",
+    "price": "20.99"
+  },
+  {
+    "name": "64 Gallon Trash",
+    "image": "https://i.ibb.co/nB44YN4/pricing-2.png",
+    "holds": "4 Trash bags",
+    "serves": "1-4 people",
+    "maxWeight": "Approx 36kg",
+    "service": "Every Day",
+    "price": "20.99"
+  },
+  {
+    "name": "76 Gallon Trash",
+    "image": "https://i.ibb.co/p1n6N3N/pricing-3.png",
+    "holds": "6 Trash bags",
+    "serves": "1-8 people",
+    "maxWeight": "Approx 54kg",
+    "service": "Every Day",
+    "price": "20.99"
+  }
+]

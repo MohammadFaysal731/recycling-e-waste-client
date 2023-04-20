@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Garbage Pickup",
+    "description": "Their job involves picking up and transporting waste to disposal sites, landfills, or recycling centers using large vehicles, such as garbage trucks. In addition to collecting trash, garbage collectors also maintain and clean their vehicles and equipment.",
+    "image": "https://i.ibb.co/hfPFGVv/garbage-pickup.png",
+    "price": 50
+  },
+  {
+    "name": "Dumpster Rental",
+    "description": "Dumpster rental business is a service that provides temporary dumpsters to customers for the disposal of their waste. Customers can rent dumpsters for a variety of purposes, including household cleanouts, construction projects, and more.",
+    "image": "https://i.ibb.co/LPRfz00/dumpster-rental.png",
+    "price": 70
+  },
+  {
+    "name": "Waste Collection",
+    "description": "It is the transfer of solid waste from the point of use and disposal to the point of treatment or landfill. Waste collection also includes the curbside collection of recyclable materials that technically are not waste, as part of a municipal landfill diversion program.",
+    "image": "https://i.ibb.co/vHx0X6y/waste-collection.png",
+    "price": 89
+  },
+  {
+    "name": "Recycling Service",
+    "description": "Recycling Service means an off-site service that provides processing of material and diversion from a landfill. Recycling Service means the collection of recyclable materials as administered by the Regional District of Kootenay Boundary to service the City.",
+    "image": "https://i.ibb.co/w0zsstm/recyling-service.png",
+    "price": 99
+  },
+  {
+    "name": "Waste Disposal Service",
+    "description": "Waste Disposal Services means the removal of all physical waste generated or collected by the Contractor or its Personnel in accordance with this Agreement, or which they are obliged to collect under this Agreement but do not collect, from all property owned or controlled by the Principal and in accordance with all relevant Laws, Approvals, standards and Codes and the Principal’s Policies and Procedures.",
+    "image": "https://i.ibb.co/VVdCqjt/waste-disposal-service.png",
+    "price": 100
+  }
+]

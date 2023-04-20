@@ -9,8 +9,10 @@ const Banner = () => {
         <div id="item1" className="carousel-item w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 p-10 place-items-center">
             <div className="mb-5">
-              <h2 className="text-4xl font-bold">ELECTRONIC</h2>
-              <h3 className="text-3xl mt-3 font-bold">RECYCLING</h3>
+              <div className="text-primary font-bold">
+                <h2 className="text-4xl">ELECTRONIC</h2>
+              <h3 className="text-3xl mt-3">RECYCLING</h3> 
+              </div>
               <p className="py-6">
                 E-waste recycling is the process of extracting valuable
                 materials after shredding the e-waste into tiny pieces that
@@ -32,8 +34,11 @@ const Banner = () => {
         <div id="item2" className="carousel-item w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 p-10 place-items-center">
             <div className="mb-5">
-              <h2 className="text-4xl font-bold">E - Waste</h2>
-              <h3 className="text-3xl mt-3 font-bold">Business For Its</h3>
+              <div className="text-primary font-bold">
+                <h2 className="text-4xl">E - Waste</h2>
+              <h3 className="text-3xl mt-3">Business For Its</h3>
+              </div>
+              
               <p className="py-6">
                 E-Waste Recycling Process There is an e-waste recycling plant
                 where the end-of-life electronic products which are collected
@@ -55,10 +60,13 @@ const Banner = () => {
         <div id="item3" className="carousel-item w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 p-10 place-items-center">
             <div className="mb-5">
-              <h2 className="text-4xl font-bold">Did you know About ?</h2>
-              <h3 className="text-3xl mt-3 font-bold">
+              <div className="text-primary font-bold ">
+                  <h2 className="text-4xl">Did you know About ?</h2>
+              <h3 className="text-3xl mt-3">
                 International E - Waste Day
               </h3>
+              </div>
+            
               <p className="py-6">
                 Each year, International E-Waste Day is held on 14<sup>th</sup>,
                 October, 2020 an opportunity to reflect on the impacts of
