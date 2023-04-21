@@ -13,7 +13,7 @@ const Contact = () => {
           </div>
           {/* location */}
           <div className="my-10">
-            <h2 className="card-title text-primary">Location New Hyde</h2>
+            <h2 className="card-title text-primary">Location</h2>
             <p>Dhaka Bangladesh</p>
           </div>
           {/* phone*/}
