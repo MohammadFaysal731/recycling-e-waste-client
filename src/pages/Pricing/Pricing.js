@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
   const [pricing, setPricing] = useState([]);
@@ -15,7 +16,7 @@ const Pricing = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {pricing?.map(
           (
-            { name, image, holds, serves, maxWeight, service, price },
+            { _id, name, image, holds, serves, maxWeight, service, price },
             index
           ) => (
             <div className="card bg-base-100 shadow-xl" key={index}>
@@ -48,7 +49,9 @@ const Pricing = () => {
                   </h3>
                 </div>
                 <div className="card-actions">
-                  <button className="btn btn-primary">Select Plan</button>
+                  <button className="btn btn-primary">
+                    <Link to={`/pricing/${_id}`}>Select Plan</Link> 
+                  </button>
                 </div>
               </div>
             </div>

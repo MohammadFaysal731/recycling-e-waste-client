@@ -2,8 +2,8 @@ import React from 'react';
 import Banner from '../../components/Banner';
 import About from '../About';
 import Contact from '../Contact';
-import Pricing from '../Pricing';
-import Services from '../Services';
+import Pricing from '../Pricing/Pricing';
+import Services from '../Services/Services';
 import Team from '../Team';
 import Testimonials from '../Testimonials';
 

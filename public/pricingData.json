@@ -1,5 +1,6 @@
 [
   {
+    "_id": 1,
     "name": "32 Gallon Trash",
     "image": "https://i.ibb.co/7YVZ3M7/pricing-1.png",
     "holds": "2 Trash bags",
@@ -9,6 +10,7 @@
     "price": "20.99"
   },
   {
+    "_id": 2,
     "name": "64 Gallon Trash",
     "image": "https://i.ibb.co/nB44YN4/pricing-2.png",
     "holds": "4 Trash bags",
@@ -18,6 +20,7 @@
     "price": "50.99"
   },
   {
+    "_id": 3,
     "name": "76 Gallon Trash",
     "image": "https://i.ibb.co/p1n6N3N/pricing-3.png",
     "holds": "6 Trash bags",

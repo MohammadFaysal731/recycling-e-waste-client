@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile, } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SingUpImage from "../assets/sing-up.png";
 import Loading from '../components/Loading';
 import SocialSignIn from '../components/SocialSignIn';
@@ -15,13 +15,15 @@ const SingUP = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-     const navigate = useNavigate();
-     let errorElement;
+    let errorElement;
+    const navigate = useNavigate();
+     const location = useLocation();
+     const from = location.state?.from?.pathname || "/";
      useEffect(()=>{
       if (emailUser) {
-       navigate("/about");
+       navigate(from,{replace:true});
      }
-     },[emailUser, navigate])
+     },[emailUser, navigate,from])
      
      if (emailUserLoading || updating) {
        return <Loading />;

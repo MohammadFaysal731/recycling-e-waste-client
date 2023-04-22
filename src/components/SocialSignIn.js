@@ -1,18 +1,20 @@
 import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { FcGoogle } from "react-icons/fc";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase.init';
 import Loading from './Loading';
 const SocialSignIn = () => {
   const [signInWithGoogle, googleUser, googleUserLoading, googleUserError] = useSignInWithGoogle(auth);
-  const navigate=useNavigate();
   let errorElement;
+  const navigate=useNavigate();
+  const location =useLocation();
+  const from = location.state?.from?.pathname || "/";
   useEffect(()=>{
    if(googleUser){
-    navigate("/about")
+    navigate(from,{replace:true});
   } 
-  },[googleUser, navigate])
+  },[googleUser, navigate,from])
   
   if(googleUserLoading){
     return <Loading/>
