@@ -1,10 +1,11 @@
 import React from 'react';
+import Banner from '../../components/Banner';
 import About from '../About';
 import Contact from '../Contact';
 import Pricing from '../Pricing';
 import Services from '../Services';
 import Team from '../Team';
-import Banner from './Banner';
+import Testimonials from '../Testimonials';
 
 const Home = () => {
   return <div className="max-w-[1440px] mx-auto">
@@ -13,6 +14,7 @@ const Home = () => {
     <Pricing/>
     <Team/>
     <About/>
+    <Testimonials/>
     <Contact/>
   </div>;
 };

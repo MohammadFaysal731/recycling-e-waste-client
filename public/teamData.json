@@ -3,35 +3,27 @@
     "id": 1,
     "name": "Shafin Ahmed",
     "rating": 5,
-    "image": "https://i.ibb.co/vDhjQwW/Shafin-Ahmed.jpg",
-    "comments": "This is a very good device."
+    "image": "https://i.ibb.co/vDhjQwW/Shafin-Ahmed.jpg"
   },
   {
     "id": 2,
     "name": "Md Ferdous",
-    "rating": 4,
-    "image": "https://i.ibb.co/Gpk4g93/Md-Ferdous.jpg",
-    "comments": "It's have 11 generation intel core i7 it's first."
+    "image": "https://i.ibb.co/Gpk4g93/Md-Ferdous.jpg"
   },
   {
     "id": 3,
     "name": "Rashida Akter Chadni",
-    "rating": 4,
-    "image": "https://i.ibb.co/hWDdtxk/Rashida-Akter-Chadni.jpg",
-    "comments": "It's have 16 GB memory & 512 GB SSD Storage."
+    "image": "https://i.ibb.co/hWDdtxk/Rashida-Akter-Chadni.jpg"
   },
   {
     "id": 4,
     "name": "Mohammad Faysal",
     "rating": 5,
-    "image": "https://i.ibb.co/RTB4Qbt/IMG-20200529-120554-2.jpg",
-    "comments": "It's have 14 diagonal FHD display."
+    "image": "https://i.ibb.co/RTB4Qbt/IMG-20200529-120554-2.jpg"
   },
   {
     "id": 5,
     "name": "Md Fahid Hassan Fuad",
-    "rating": 4,
-    "image": "https://i.ibb.co/BghQLtc/Md-Fahid-Hassan-Fuad.jpg",
-    "comments": "I can play free fire smoothly"
+    "image": "https://i.ibb.co/BghQLtc/Md-Fahid-Hassan-Fuad.jpg"
   }
 ]
