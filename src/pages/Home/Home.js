@@ -4,7 +4,6 @@ import About from '../About';
 import Contact from '../Contact';
 import Pricing from '../Pricing/Pricing';
 import Services from '../Services/Services';
-import Team from '../Team';
 import Testimonials from '../Testimonials';
 
 const Home = () => {
@@ -12,7 +11,6 @@ const Home = () => {
     <Banner/>
     <Services/>
     <Pricing/>
-    <Team/>
     <About/>
     <Testimonials/>
     <Contact/>

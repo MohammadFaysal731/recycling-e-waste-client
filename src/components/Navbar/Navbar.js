@@ -20,17 +20,38 @@ const Navbar = () => {
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <AiOutlineBars className="text-primary text-2xl" />
             </label>
+            {/* mobile menu */}
             <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               {navbarData.slice(0, 5)?.map(({ name, link }, index) => (
                 <li className="mx-2" key={index}>
                   <NavLink to={link}>{name}</NavLink>
                 </li>
               ))}
-              {navbarData.slice(5, 7)?.map(({ name, link }, index) => (
-                <li className="mx-2" key={index}>
-                  <NavLink to={link}>{name}</NavLink>
-                </li>
-              ))}
+              {user ? (
+                <>
+                  <li className="mx-2">
+                    <span className="uppercase border border-primary">
+                      {user?.displayName?.slice(0, 1)}
+                    </span>
+                  </li>
+                  <li className="mx-2">
+                    <button
+                      onClick={handleSignOut}
+                      className="hover:text-primary"
+                    >
+                      Sign out
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  {navbarData.slice(5, 7)?.map(({ name, link }, index) => (
+                    <li className="mx-2" key={index}>
+                      <NavLink to={link}>{name}</NavLink>
+                    </li>
+                  ))}
+                </>
+              )}
             </ul>
           </div>
           <Link to="/" className="text-lg md:text-2xl font-bold text-primary">
@@ -53,7 +74,12 @@ const Navbar = () => {
                   </span>
                 </li>
                 <li className="mx-2">
-                  <button onClick={handleSignOut}>Sign out</button>
+                  <button
+                    onClick={handleSignOut}
+                    className="hover:text-primary"
+                  >
+                    Sign out
+                  </button>
                 </li>
               </>
             ) : (
