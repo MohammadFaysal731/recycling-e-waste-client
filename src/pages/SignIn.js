@@ -1,18 +1,23 @@
-import React, { useEffect } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import React, { useEffect, useRef } from "react";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import SignInImage from "../assets/sign-in.png";
 import Loading from "../components/Loading";
 import SocialSignIn from "../components/SocialSignIn";
 import { auth } from "../firebase.init";
 const SignIn = () => {
+  const emailRef =useRef();
   const [signInWithEmailAndPassword, emailUser, emailUserLoading, emailUserError] =
     useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, sendingError] =
+      useSendPasswordResetEmail(auth);
   const {
     register,
     formState: { errors },
     handleSubmit,
+    reset
   } = useForm();
   let errorElement;
   const navigate = useNavigate();
@@ -24,17 +29,31 @@ const SignIn = () => {
     } 
     },[emailUser, navigate,from])
   
-    if (emailUserLoading) {
+    if (emailUserLoading || sending) {
       return <Loading />;
     }
-    if (emailUserError) {
+    if (emailUserError || sendingError) {
       errorElement = <p className="text-red-500">{emailUserError?.message}</p>;
     }
   const onSubmit = (data) => {
     const email = data.email;
     const password = data.password;
     signInWithEmailAndPassword(email, password);
+    reset();
   };
+  const forgetPassword=async ()=>{
+    const email =emailRef.current.value;
+    if(email){
+      const success = await sendPasswordResetEmail(email)
+      if(success){
+         toast.success(`Successfully send email`);
+      reset() 
+      }
+    }
+    else{
+      toast.error(`Failed to send email`)
+    }
+  }
   return (
     <div className="max-w-[1440px] mx-auto p-10">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -52,6 +71,7 @@ const SignIn = () => {
                     message: "Email is required",
                   },
                 })}
+                ref={emailRef}
                 type="email"
                 placeholder="Your email"
                 autoComplete="off"
@@ -99,6 +119,12 @@ const SignIn = () => {
             {errorElement}
             <button className="btn btn-primary">Sing In</button>
           </form>
+          <p
+            onClick={forgetPassword}
+            className="cursor-pointer flex justify-end md:text-lg font-bold text-primary"
+          >
+            Forget Password ?{" "}
+          </p>
           <SocialSignIn />
         </div>
         {/* image */}

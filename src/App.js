@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar/Navbar';
@@ -8,7 +9,7 @@ import { publicRoutes } from './routes/publicRoutes';
 
 function App() {
   return (
-    <div className="">
+    <div className="select-none">
       <Navbar />
       <Routes>
         {publicRoutes?.map(({ path, Comment }, index) => (
@@ -19,6 +20,7 @@ function App() {
         ))}
       </Routes>
       <Footer/>
+      <ToastContainer/>
     </div>
   );
 }

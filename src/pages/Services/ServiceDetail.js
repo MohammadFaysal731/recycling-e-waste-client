@@ -6,7 +6,7 @@ const ServiceDetail = () => {
   return (
     <div className="max-w-[1440px] mx-auto p-10">
       <button className="btn btn-xs btn-primary">
-        <Link to="/pricing">Back</Link>
+        <Link to="/services">Back</Link>
       </button>
       <div className="text-primary text-center font-bold text-xl">
         <h1>Service  detail :- {id}</h1>
