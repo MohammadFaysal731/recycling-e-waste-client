@@ -55,6 +55,7 @@ const Contact = () => {
                   })}
                   type="text"
                   placeholder="Your name"
+                  autoComplete="off"
                   className="input input-bordered input-primary w-full"
                 />
                 <label className="label">
@@ -76,6 +77,7 @@ const Contact = () => {
                   })}
                   type="email"
                   placeholder="Your email"
+                  autoComplete="off"
                   className="input input-bordered input-primary w-full"
                 />
                 <label className="label">
@@ -102,6 +104,7 @@ const Contact = () => {
                 })}
                 type="number"
                 placeholder="Your phone"
+                autoComplete="off"
                 className="input input-bordered input-primary w-full"
               />
               <label className="label">
@@ -132,6 +135,7 @@ const Contact = () => {
                 })}
                 className="textarea textarea-primary h-24"
                 placeholder="Massage"
+                autoComplete="off"
               ></textarea>
               <label className="label">
                 {errors?.massage?.type === "required" && (
@@ -143,7 +147,7 @@ const Contact = () => {
                   <small className="text-red-500">
                     {errors?.massage?.message}
                   </small>
-                )}{" "}
+                )}
               </label>
             </div>
             <button className="btn btn-primary">Message</button>

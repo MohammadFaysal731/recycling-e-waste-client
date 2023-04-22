@@ -13,14 +13,17 @@ const Team = () => {
         Meet Our Team Members
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {members?.map(({ name, image }, index) => (
+        {members?.map(({ name, image, professions }, index) => (
           <div key={index}>
             <div className="avatar">
               <div className=" mask mask-hexagon">
                 <img src={image} alt="team-members-images" className="w-full" />
               </div>
             </div>
-            <p className="text-xl text-primary text-center font-bold">{name}</p>
+            <div className="text-xl text-primary text-center font-bold">
+              <p>{name}</p>
+              <span>{professions}</span>
+            </div>
           </div>
         ))}
       </div>

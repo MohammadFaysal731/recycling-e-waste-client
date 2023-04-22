@@ -3,27 +3,32 @@
     "id": 1,
     "name": "Shafin Ahmed",
     "rating": 5,
-    "image": "https://i.ibb.co/vDhjQwW/Shafin-Ahmed.jpg"
+    "image": "https://i.ibb.co/vDhjQwW/Shafin-Ahmed.jpg",
+    "professions": "Web Developer"
   },
   {
     "id": 2,
     "name": "Md Ferdous",
-    "image": "https://i.ibb.co/Gpk4g93/Md-Ferdous.jpg"
+    "image": "https://i.ibb.co/Gpk4g93/Md-Ferdous.jpg",
+    "professions": "UX Designer and Developer"
   },
   {
     "id": 3,
     "name": "Rashida Akter Chadni",
-    "image": "https://i.ibb.co/hWDdtxk/Rashida-Akter-Chadni.jpg"
+    "image": "https://i.ibb.co/hWDdtxk/Rashida-Akter-Chadni.jpg",
+    "professions": "Web Developer"
   },
   {
     "id": 4,
     "name": "Mohammad Faysal",
     "rating": 5,
-    "image": "https://i.ibb.co/RTB4Qbt/IMG-20200529-120554-2.jpg"
+    "image": "https://i.ibb.co/RTB4Qbt/IMG-20200529-120554-2.jpg",
+    "professions": "Web Developer"
   },
   {
     "id": 5,
     "name": "Md Fahid Hassan Fuad",
-    "image": "https://i.ibb.co/BghQLtc/Md-Fahid-Hassan-Fuad.jpg"
+    "image": "https://i.ibb.co/BghQLtc/Md-Fahid-Hassan-Fuad.jpg",
+    "professions": "Web Developer"
   }
 ]

@@ -1,22 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile, } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import SingUpImage from "../assets/sing-up.png";
+import Loading from '../components/Loading';
+import SocialSignIn from '../components/SocialSignIn';
+import { auth } from '../firebase.init';
 const SingUP = () => {
+  const [createUserWithEmailAndPassword, emailUser, emailUserLoading, emailUserError] = useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating, updatingError] = useUpdateProfile(auth);
+    
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const onSubmit = (data) => {
+     const navigate = useNavigate();
+     let errorElement;
+     useEffect(()=>{
+      if (emailUser) {
+       navigate("/about");
+     }
+     },[emailUser, navigate])
+     
+     if (emailUserLoading || updating) {
+       return <Loading />;
+     }
+     if (emailUserError || updatingError) {
+       errorElement = <p className="text-red-500">{emailUserError?.message}</p>;
+     }
+  const onSubmit = async (data) => {
     const name = data.name;
     const email = data.email;
     const password = data.password;
-    console.log(name, email, password);
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({displayName:name});
+
   };
   return (
     <div className="max-w-[1440px] mx-auto p-10">
-      <div className="grid grid-cols-1 md:grid-cols-2"> 
-        <div className='md:order-2'>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="md:order-2">
           <h2 className="text-xl md:text-2xl font-bold text-primary text-center m-5">
             Sing up
           </h2>
@@ -32,6 +56,7 @@ const SingUP = () => {
                 })}
                 type="text"
                 placeholder="Your name"
+                autoComplete="off"
                 className="input input-bordered input-primary w-full"
               />
               <label className="label">
@@ -53,6 +78,7 @@ const SingUP = () => {
                 })}
                 type="email"
                 placeholder="Your email"
+                autoComplete="off"
                 className="input input-bordered input-primary w-full"
               />
               <label className="label">
@@ -78,6 +104,7 @@ const SingUP = () => {
                 })}
                 type="password"
                 placeholder="Your password"
+                autoComplete="off"
                 className="input input-bordered input-primary w-full"
               />
               <label className="label">
@@ -93,9 +120,10 @@ const SingUP = () => {
                 )}
               </label>
             </div>
-
+            {errorElement}
             <button className="btn btn-primary">Sing Up</button>
           </form>
+          <SocialSignIn />
         </div>
         {/* image */}
         <div>

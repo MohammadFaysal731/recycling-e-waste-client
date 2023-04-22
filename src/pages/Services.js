@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ServiceBookingModal from '../components/ServiceBookingModal';
 
 const Services = () => {
   const [services, setServices]=useState([]);
@@ -24,17 +23,18 @@ const Services = () => {
               <p title={description}>{description?.slice(0,100)}...</p>
               <div className="card-actions">
                 {/* The button to open modal */}
-                <label
+                {/* <label
                   htmlFor="service-booking-modal"
                   className="btn btn-primary"
                 >
                   Buy Now
-                </label>
+                </label> */}
+                <button className='btn btn-primary'> Buy Now</button>
               </div>
             </div>
           </div>
         ))}
-        <ServiceBookingModal />
+        {/* <ServiceBookingModal /> */}
       </div>
     </div>
   );
