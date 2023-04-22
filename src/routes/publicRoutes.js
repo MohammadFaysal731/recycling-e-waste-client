@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import NotFound from "../pages/NotFound";
 import Pricing from "../pages/Pricing";
 import Services from "../pages/Services";
+import SignIn from "../pages/SignIn";
+import SingUP from "../pages/SingUP";
 import Team from "../pages/Team";
 
 export const publicRoutes = [
@@ -13,5 +15,7 @@ export const publicRoutes = [
   {path:"/team", Comment:Team},
   {path:"/about", Comment:About},
   {path:"/contact", Comment:Contact},
+  {path:"/sign-in", Comment:SignIn},
+  {path:"/sing-up", Comment:SingUP},
   {path:"*",Comment:NotFound},
 ]

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import banner1 from '../../assets/banner-1.png';
 import banner2 from '../../assets/banner-2.png';
 import banner3 from '../../assets/banner-3.png';
@@ -11,7 +12,7 @@ const Banner = () => {
             <div className="mb-5">
               <div className="text-primary font-bold">
                 <h2 className="text-4xl">ELECTRONIC</h2>
-              <h3 className="text-3xl mt-3">RECYCLING</h3> 
+                <h3 className="text-3xl mt-3">RECYCLING</h3>
               </div>
               <p className="py-6">
                 E-waste recycling is the process of extracting valuable
@@ -20,7 +21,9 @@ const Banner = () => {
                 current challenges are preventing the electronic recycling
                 industry from scaling up
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-primary">
+                <Link to="/contact">Get Started</Link>
+              </button>
             </div>
             <div className="">
               <img
@@ -36,9 +39,9 @@ const Banner = () => {
             <div className="mb-5">
               <div className="text-primary font-bold">
                 <h2 className="text-4xl">E - Waste</h2>
-              <h3 className="text-3xl mt-3">Business For Its</h3>
+                <h3 className="text-3xl mt-3">Business For Its</h3>
               </div>
-              
+
               <p className="py-6">
                 E-Waste Recycling Process There is an e-waste recycling plant
                 where the end-of-life electronic products which are collected
@@ -46,7 +49,9 @@ const Banner = () => {
                 Such end-of-life products are transported to the recycling plant
                 for segregation, dismantling, treatment and disposal.
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-primary">
+                <Link to="/contact">Get Started</Link>
+              </button>
             </div>
             <div className="">
               <img
@@ -61,12 +66,10 @@ const Banner = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 p-10 place-items-center">
             <div className="mb-5">
               <div className="text-primary font-bold ">
-                  <h2 className="text-4xl">Did you know About ?</h2>
-              <h3 className="text-3xl mt-3">
-                International E - Waste Day
-              </h3>
+                <h2 className="text-4xl">Did you know About ?</h2>
+                <h3 className="text-3xl mt-3">International E - Waste Day</h3>
               </div>
-            
+
               <p className="py-6">
                 Each year, International E-Waste Day is held on 14<sup>th</sup>,
                 October, 2020 an opportunity to reflect on the impacts of
@@ -74,7 +77,9 @@ const Banner = () => {
                 e-products.
               </p>
 
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-primary">
+                <Link to="/contact">Get Started</Link>
+              </button>
             </div>
             <div className="">
               <img
